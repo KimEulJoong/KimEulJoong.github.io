@@ -103,3 +103,10 @@ theme: m
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# 0831 theme_config 블록으로 주입
+theme_config:
+  menu:
+    Home: /
+    Projects: /projects/
+    About: /about/

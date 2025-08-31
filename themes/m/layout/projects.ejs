@@ -1,0 +1,49 @@
+<%- partial('_partial/head') %>
+<main class="container">
+
+  <h1>PROJECTS</h1>
+
+  <div class="projects-grid">
+    <% site.posts.filter(p => p.categories && p.categories.toArray().includes('Projects'))
+      .sort('date', -1).forEach(function(p){ %>
+
+      <article class="project-card">
+        <% if (p.cover) { %>
+          <a href="<%- url_for(p.path) %>" class="cover">
+            <img src="<%- url_for(p.cover) %>" alt="<%- p.title %>">
+          </a>
+        <% } %>
+        <h3><a href="<%- url_for(p.path) %>"><%- p.title %></a></h3>
+        <% if (p.duration) { %><p class="muted"><%= p.duration %></p><% } %>
+        <% if (p.highlights && p.highlights.length) { %>
+          <ul class="bullets">
+          <% p.highlights.slice(0,3).forEach(function(h){ %>
+            <li><%- h %></li>
+          <% }); %>
+          </ul>
+        <% } %>
+        <% if (p.stack && p.stack.length) { %>
+          <p class="stack">
+          <% p.stack.forEach(function(s){ %>
+            <span class="badge"><%- s %></span>
+          <% }); %>
+          </p>
+        <% } %>
+      </article>
+
+    <% }); %>
+  </div>
+</main>
+<%- partial('_partial/foot') %>
+
+<style>
+.projects-grid {
+  display: grid; gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+.project-card { border: 1px solid rgba(0,0,0,.08); padding: 16px; border-radius: 12px; }
+.project-card .cover img { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; }
+.badge { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; background:#eee; margin-right:6px; }
+.muted { color:#777; font-size: 0.9em; }
+.bullets { padding-left: 18px; margin: 8px 0; }
+</style>
