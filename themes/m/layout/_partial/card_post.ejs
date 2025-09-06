@@ -16,6 +16,23 @@
     <div class="mdui-card-content mdui-typo">
         <% if(is_post() || is_page() || theme.posts.index_content == 'content' || theme.posts.index_content == 'auto' && !post.excerpt) { %>
         <div class="p-summary" style="display:none"><%- post.excerpt %></div>
+        
+        <!-- TOC 디버깅 및 렌더링 -->
+        <% if(is_post() || is_page()) { %>
+            <% var tocContent = toc(post.content, {
+                list_number: false,
+                min_depth: 2,
+                max_depth: 2,
+                class: 'toc-nav'
+            }); %>
+            <% if(post.toc === true && tocContent && tocContent.trim() !== '') { %>
+            <div id="table-of-contents">
+                <h2>목차</h2>
+                <%- tocContent %>
+            </div>
+            <% } %>
+        <% } %>
+        
         <main class="e-content"><%- post.content %></main>
         <% if(theme.posts.license !== false && post.license !== false) { %>
         <%- partial ('_widget/post_license', {post: post}) %>

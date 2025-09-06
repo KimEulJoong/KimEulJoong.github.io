@@ -4,7 +4,7 @@ m:
   syntax: "-" # syntax
   opacity: "1" # card opacity
   border_radius: "4px" # card border-radius
-  max_width: "720px" # container max width
+  max_width: "1200px" # container max width
   layout: "light" # appbar/drawer layout, light / dark / auto
   css: |
     body{background-color: #f6f6f6}
@@ -41,23 +41,54 @@ appbar:
   search: true
   rss: false
 
+# 기술 블로그용 사이드바 설정 (단순하고 명확하게)
 drawer:
   avatar: 
-  toc: false
-  search: false
+  toc: true
+  search: true
   home: true
-  archives: true
-  categories: true
-  tags: false
+  archives: true   # 기본 아카이브 활성화
+  categories: false # 카테고리는 커스텀으로 대체
+  tags: true       # 태그 활성화
   links: false
   rss: false
+  custom:
+    "💻 RISC-V":
+      href: "/categories/RISC-V/"
+      class: "material-icons"
+      content: "memory"
+    "🖥️ Cortex-M":
+      href: "/categories/Cortex-M/"
+      class: "material-icons"
+      content: "developer_board"
+    "📡 APB Protocol":
+      href: "/categories/APB/"
+      class: "material-icons"
+      content: "device_hub"
+    "⚡ Verilog":
+      href: "/categories/Verilog/"
+      class: "material-icons"
+      content: "electrical_services"
+    "🔌 UART":
+      href: "/categories/UART/"
+      class: "material-icons"
+      content: "cable"
+    "🔄 I2C":
+      href: "/categories/I2C/"
+      class: "material-icons"
+      content: "sync_alt"
+    "📊 SPI":
+      href: "/categories/SPI/"
+      class: "material-icons"
+      content: "timeline"
 
 footer:
-  since: 
-  hosted_on: 
+  since: 2024
+  hosted_on: GitHub Pages
   powered_by_hexo: true
   theme_m: true
   custom: |
+    <p>임베디드 시스템과 하드웨어 설계</p>
 
 open_graph:
   google_analytics:
@@ -69,8 +100,8 @@ open_graph:
 posts:
   thumbnail_title: false # true /false
   index_content: auto # false / auto / excerpt / content
-  show_categories: false
-  license: '<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>'
+  show_categories: true
+  license: false # 라이선스 표시 비활성화
 
 comments:
   use: false # utterances
@@ -87,7 +118,7 @@ comments:
     mapping: pathname
     reactions_enabled: 1
     input_position: bottom
-    theme: preferred_color_scheme
+    theme: preferred-color-scheme
     src: "https://giscus.app/client.js"
 
 search:

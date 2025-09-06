@@ -1,0 +1,141 @@
+# Hexo M Theme Configuration
+# Theme: https://github.com/theme-M/hexo-theme-M
+
+# Header
+menu:
+  홈: /
+  RISC-V: /categories/RISC-V
+  Cortex-M: /categories/Cortex-M
+  프로젝트: /archives
+  소개: /about
+
+# Content
+excerpt_link: 더 읽기
+fancybox: true
+
+# Profile
+profile:
+  enabled: true
+  #avatar: /images/avatar.jpg
+  author: 고은
+  author_title: 임베디드 시스템 개발자
+  location: Seoul, Korea
+  follow: https://github.com/goeun-oh
+
+# Contact
+contact:
+  - icon: github
+    url: https://github.com/goeun-oh
+  - icon: email
+    url: mailto:your-email@example.com
+
+# Social
+social:
+  github: https://github.com/goeun-oh
+  linkedin: # Add your LinkedIn URL
+  instagram: # Add your Instagram URL
+
+# Footer
+footer:
+  since: 2024
+  icon:
+    name: fa fa-heart
+    animated: true
+    color: "#ff0000"
+  copyright: 고은의 기술 블로그
+
+# Drawer (사이드바) 설정
+drawer:
+  avatar: /images/avatar.jpg
+  toc: true
+  search: true
+  home: true
+  archives: true
+  categories: true  # 카테고리 메뉴를 사이드바에 표시
+  tags: false
+  links: false
+  rss: false
+
+# Sidebar
+sidebar:
+  position: right
+  display: post
+  padding: 18
+  offset: 12
+
+# Post
+post:
+  meta:
+    date:
+      enabled: true
+      format: "YYYY-MM-DD"
+    updated:
+      enabled: true
+      format: "YYYY-MM-DD"
+    categories:
+      enabled: true
+      delimiter: " > "
+    tags:
+      enabled: true
+      delimiter: " "
+
+# Archive
+archive:
+  type: 'monthly'
+
+# Code Highlight
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace: 4
+  
+# Comments
+comments:
+  enable: false
+  provider: disqus
+  disqus:
+    shortname: # your disqus shortname
+
+# Search
+search:
+  enable: true
+  service: local
+  path: search.xml
+  field: post
+  onload: false
+
+# Analytics
+analytics:
+  google_analytics: # your google analytics id
+  gtag: # your gtag id
+
+# SEO
+seo:
+  enable: true
+  structured_data:
+    enable: true
+  open_graph:
+    enable: true
+    image: # default og:image
+  twitter_card:
+    enable: true
+    image: # default twitter:image
+
+# Favicon
+favicon: /favicon.ico
+
+# 커스텀 CSS/JS 파일 추가
+custom_file_path:
+  head: source/css/custom.css
+  footer: source/js/custom.js
+  
+# Math
+math:
+  enable: false
+  engine: mathjax
+  mathjax:
+    src: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
+
+skip_render:
+  - readmes/*.md
