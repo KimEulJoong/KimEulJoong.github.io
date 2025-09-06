@@ -2,6 +2,7 @@
 # Theme: https://github.com/theme-M/hexo-theme-M
 
 # Header
+# 상단 네비게이션 바
 menu:
   홈: /
   RISC-V: /categories/RISC-V
@@ -17,10 +18,10 @@ fancybox: true
 profile:
   enabled: true
   #avatar: /images/avatar.jpg
-  author: 고은
+  author: 을중
   author_title: 임베디드 시스템 개발자
   location: Seoul, Korea
-  follow: https://github.com/goeun-oh
+  follow: https://github.com/KimEulJoong
 
 # Contact
 contact:
@@ -42,7 +43,7 @@ footer:
     name: fa fa-heart
     animated: true
     color: "#ff0000"
-  copyright: 고은의 기술 블로그
+  copyright: 
 
 # Drawer (사이드바) 설정
 drawer:

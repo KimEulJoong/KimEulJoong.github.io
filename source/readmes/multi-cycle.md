@@ -1,20 +1,21 @@
 # RISC-V RV32I 기반 CPU Core 설계
 
-2025.04.09 ~ 2025.04.13 (1人 프로젝트)
+2025.08.25 ~ 2025.04.26 (1人 프로젝트)
 
 
 ## 요약
-RISC-V 명령어 구조(RV32I)를 기반으로 한 싱글 사이클 CPU Core를 SystemVerilog로 직접 설계하고, 각 명령어 타입(R/I/S/B/U/J Type)에 대한 시뮬레이션을 통해 기능 검증
+RISC-V 명령어 구조(RV32I)를 기반으로 Multi Cycle Architecture의 CPU Core를 SystemVerilog로 직접 설계하고, 각 명령어 타입(R/I/S/B/U/J Type)에 대한 시뮬레이션 검증
 
-<img src="../images/projects/single.png" alt="RISC-V Peripheral 프로젝트" style="width: 100%; max-width: 600px; border-radius: 8px;">
+<img src="../images/projects/single.jpg" alt="RISC-V CPU 설계 프로젝트" style="width: 100%; max-width: 600px; border-radius: 8px;">
 
-- RV32I ISA의 6가지 명령어 형식을 모두 지원하는 싱글 사이클 CPU 설계
+- RV32I ISA의 6가지 명령어 형식을 모두 지원하는 멀티 사이클 CPU 설계
 - ALU, 레지스터 파일, 제어 유닛, 메모리, PC/분기 처리 등 데이터패스 전체 구성
+- 멀티 사이클 아키텍처 구현을 위한 F/F 추가 및 data control을 위한 STATE 구성
 - 각 명령어에 대한 실행 흐름(연산, 제어, 분기)을 구분하여 블록 다이어그램 기반 구현
 - ADD, SUB, LW, SW, BEQ, JAL 등 다양한 명령어의 시뮬레이션 결과 확인 및 동작 검증
 
 ## 역할
-- Instruction Fetch → Decode → Execute 흐름에 따른 데이터 경로 및 제어 신호 설계
+- Instruction Fetch → Decode → Execute → MemoryAccess → WriteBack 흐름에 따른 데이터 경로 및 제어 신호 설계
 - RV32I 명령어 Type별 제어 흐름 정의 및 명령어 해석 로직 구현
 - Load/Store, 분기(Branch), 점프(JAL, JALR) 등 메모리 및 제어 명령 처리 로직 구성
 - Vivado 환경에서 명령어별 Simulation 수행 및 결과 분석

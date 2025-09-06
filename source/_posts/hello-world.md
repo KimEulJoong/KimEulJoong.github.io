@@ -145,7 +145,7 @@
                 </div>
                 <div class="info-content">
                     <div class="info-label">이름</div>
-                    <div class="info-value">오고은</div>
+                    <div class="info-value">김을중</div>
                 </div>
             </div>
             <div class="info-item">
@@ -156,7 +156,7 @@
                 </div>
                 <div class="info-content">
                     <div class="info-label">생년월일</div>
-                    <div class="info-value">98.01.10</div>
+                    <div class="info-value">97.08.20</div>
                 </div>
             </div>
             <div class="info-item">
@@ -167,7 +167,7 @@
                 </div>
                 <div class="info-content">
                     <div class="info-label">위치</div>
-                    <div class="info-value">경기도 용인시</div>
+                    <div class="info-value">서울시 성북구</div>
                 </div>
             </div>
             <div class="info-item">
@@ -178,7 +178,7 @@
                 </div>
                 <div class="info-content">
                     <div class="info-label">연락처</div>
-                    <div class="info-value">010-7251-3263</div>
+                    <div class="info-value">010-9790-3445</div>
                 </div>
             </div>
             <div class="info-item">
@@ -189,7 +189,7 @@
                 </div>
                 <div class="info-content">
                     <div class="info-label">이메일</div>
-                    <div class="info-value">qw433812@gmail.com</div>
+                    <div class="info-value">kimeuljoong97@gmail.com</div>
                 </div>
             </div>
             <div class="info-item">
@@ -200,7 +200,7 @@
                 </div>
                 <div class="info-content">
                     <div class="info-label">학력</div>
-                    <div class="info-value">아주대학교 (전자공학과)</div>
+                    <div class="info-value">충북대 (물리학, 컴퓨터공학(복전))</div>
                 </div>
             </div>
         </div>

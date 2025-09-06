@@ -4,16 +4,16 @@
 
 # Site
 title: ''
-subtitle: '하드웨어와 임베디드 개발을 정리하는 블로그입니다'
+subtitle: '하드웨어 및 임베디드 개발'
 description: '하드웨어 설계부터 임베디드 시스템까지, 끊임없이 배우고 성장하기'
-keywords: '하드웨어 개발자, Verilog, RISC-V, Cortex-M, AXI4, FPGA, 임베디드, 포트폴리오'
-author: 고은
+keywords: '하드웨어 개발자, Verilog, SystemVerilog, RISC-V, Cortex-M, AXI4, FPGA, 임베디드, 포트폴리오'
+author: 을중
 language: ko
 timezone: 'Asia/Seoul'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://www.goeun-oh.com
+url: https://kimeuljoong.github.io/
 root: /
 permalink: posts/:title/
 permalink_defaults:
@@ -115,7 +115,7 @@ theme_config:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/goeun-oh/goeun-oh.github.io.git
+  repo: https://github.com/KimEulJoong/KimEulJoong.github.io
   branch: gh-pages
 
 # Hexo M Theme Configuration
@@ -127,6 +127,7 @@ deploy:
 #  아카이브: /archives
 #  소개: /about
 
+# 테마가 theme/m/layout/_partial_header.ejs 같은 데서 <%- config.menu %> 를 참조하면 아래의 menu 사용
 menu:
   Home: /
   RISC-V: /categories/RISC-V/
